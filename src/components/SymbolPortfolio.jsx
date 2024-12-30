@@ -9,12 +9,12 @@ import {
   Linkedin,
   Mail,
   Terminal,
-  Cpu,
-  Database,
-  Cloud,
-  Settings,
-  Monitor,
-  Network
+  Book,
+  Code,
+  Workflow,
+  Server,
+  CloudLightning,
+  Blocks
 } from 'lucide-react';
 
 const SymbolPortfolio = () => {
@@ -29,41 +29,70 @@ const SymbolPortfolio = () => {
             whileHover={{ scale: 1.1 }}
             className="flex flex-col items-center p-6 bg-gray-800 rounded-lg"
           >
-            <Terminal size={40} className="text-green-400" />
-            <div className="mt-4 text-green-400">CLI</div>
+            <Workflow size={40} className="text-green-400" />
+            <div className="mt-4 text-green-400">n8n Expert</div>
           </motion.div>
           <motion.div 
             whileHover={{ scale: 1.1 }}
             className="flex flex-col items-center p-6 bg-gray-800 rounded-lg"
           >
-            <Cpu size={40} className="text-blue-400" />
-            <div className="mt-4 text-blue-400">Systems</div>
+            <Server size={40} className="text-blue-400" />
+            <div className="mt-4 text-blue-400">Magento Dev</div>
           </motion.div>
           <motion.div 
             whileHover={{ scale: 1.1 }}
             className="flex flex-col items-center p-6 bg-gray-800 rounded-lg"
           >
-            <Database size={40} className="text-purple-400" />
-            <div className="mt-4 text-purple-400">Data</div>
+            <Code size={40} className="text-purple-400" />
+            <div className="mt-4 text-purple-400">PHP Developer</div>
           </motion.div>
         </div>
       )
     },
-    projects: {
-      icon: <Boxes size={32} />,
+    books: {
+      icon: <Book size={32} />,
+      content: (
+        <div className="grid grid-cols-3 gap-6">
+          <motion.div 
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-gray-800 rounded-lg flex flex-col items-center text-center"
+          >
+            <Book className="w-12 h-12 text-blue-400 mb-4" />
+            <h3 className="font-bold mb-2">Ethymolonautia</h3>
+            <p className="text-sm text-gray-300">Literary Journey</p>
+          </motion.div>
+          <motion.div 
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-gray-800 rounded-lg flex flex-col items-center text-center"
+          >
+            <Book className="w-12 h-12 text-purple-400 mb-4" />
+            <h3 className="font-bold mb-2">Anycase Apology</h3>
+            <p className="text-sm text-gray-300">Philosophical Reflections</p>
+          </motion.div>
+          <motion.div 
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-gray-800 rounded-lg flex flex-col items-center text-center"
+          >
+            <Book className="w-12 h-12 text-red-400 mb-4" />
+            <h3 className="font-bold mb-2">Mum, we'll not meet in heaven</h3>
+            <p className="text-sm text-gray-300">Personal Memoir</p>
+          </motion.div>
+        </div>
+      )
+    },
+    apps: {
+      icon: <Blocks size={32} />,
       content: (
         <div className="grid grid-cols-2 gap-6">
           <motion.div 
             whileHover={{ scale: 1.05 }}
             className="p-6 bg-gray-800 rounded-lg flex flex-col items-center"
           >
-            <Cloud size={48} className="text-blue-400 mb-4" />
-            <div className="flex space-x-4">
+            <CloudLightning size={48} className="text-blue-400 mb-4" />
+            <h3 className="font-bold mb-2">App 1</h3>
+            <div className="flex space-x-4 mt-4">
               <motion.div whileHover={{ scale: 1.1 }}>
-                <Github className="w-6 h-6 cursor-pointer" />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1 }}>
-                <Monitor className="w-6 h-6 cursor-pointer" />
+                <Terminal className="w-6 h-6 cursor-pointer" />
               </motion.div>
             </div>
           </motion.div>
@@ -71,39 +100,38 @@ const SymbolPortfolio = () => {
             whileHover={{ scale: 1.05 }}
             className="p-6 bg-gray-800 rounded-lg flex flex-col items-center"
           >
-            <Network size={48} className="text-purple-400 mb-4" />
-            <div className="flex space-x-4">
+            <CloudLightning size={48} className="text-purple-400 mb-4" />
+            <h3 className="font-bold mb-2">App 2</h3>
+            <div className="flex space-x-4 mt-4">
               <motion.div whileHover={{ scale: 1.1 }}>
-                <Github className="w-6 h-6 cursor-pointer" />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1 }}>
-                <Monitor className="w-6 h-6 cursor-pointer" />
+                <Terminal className="w-6 h-6 cursor-pointer" />
               </motion.div>
             </div>
           </motion.div>
-        </div>
-      )
-    },
-    skills: {
-      icon: <Brain size={32} />,
-      content: (
-        <div className="grid grid-cols-4 gap-4">
-          {[...Array(8)].map((_, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.1 }}
-              className="aspect-square bg-gray-800 rounded-lg flex items-center justify-center"
-            >
-              <Settings 
-                size={32} 
-                className="text-gray-400"
-                style={{ 
-                  transform: `rotate(${45 * i}deg)`,
-                  transition: 'transform 0.3s ease-in-out'
-                }}
-              />
-            </motion.div>
-          ))}
+          <motion.div 
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-gray-800 rounded-lg flex flex-col items-center"
+          >
+            <CloudLightning size={48} className="text-green-400 mb-4" />
+            <h3 className="font-bold mb-2">App 3</h3>
+            <div className="flex space-x-4 mt-4">
+              <motion.div whileHover={{ scale: 1.1 }}>
+                <Terminal className="w-6 h-6 cursor-pointer" />
+              </motion.div>
+            </div>
+          </motion.div>
+          <motion.div 
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-gray-800 rounded-lg flex flex-col items-center"
+          >
+            <CloudLightning size={48} className="text-yellow-400 mb-4" />
+            <h3 className="font-bold mb-2">App 4</h3>
+            <div className="flex space-x-4 mt-4">
+              <motion.div whileHover={{ scale: 1.1 }}>
+                <Terminal className="w-6 h-6 cursor-pointer" />
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       )
     },
