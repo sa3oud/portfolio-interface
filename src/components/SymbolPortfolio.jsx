@@ -30,7 +30,7 @@ const SymbolPortfolio = () => {
             className="flex flex-col items-center p-6 bg-gray-800 rounded-lg"
           >
             <Workflow size={40} className="text-green-400" />
-            <div className="mt-4 text-green-400">n8n Expert</div>
+            <div className="mt-4 text-green-400">n8n facilitator</div>
           </motion.div>
           <motion.div 
             whileHover={{ scale: 1.1 }}
