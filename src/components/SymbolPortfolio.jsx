@@ -2,19 +2,18 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   User,
-  Boxes,
-  Brain,
+  Book,
+  Globe,
   Star,
   Github,
   Linkedin,
   Mail,
-  Terminal,
-  Book,
-  Code,
-  Workflow,
-  Server,
-  CloudLightning,
-  Blocks
+  Search,
+  Building2,
+  Fingerprint,
+  Network,
+  Eye,
+  Lock
 } from 'lucide-react';
 
 const SymbolPortfolio = () => {
@@ -24,27 +23,74 @@ const SymbolPortfolio = () => {
     profile: {
       icon: <User size={32} />,
       content: (
+        <div className="space-y-8">
+          {/* Ultra Minimal Logo */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="flex justify-center mb-12"
+          >
+            <div className="text-center">
+              <div className="text-5xl font-light mb-2">Asφ</div>
+              <div className="h-px w-24 mx-auto bg-gradient-to-r from-blue-500 to-slate-700"></div>
+              <div className="text-sm text-gray-400 mt-2">Solutions Architect</div>
+            </div>
+          </motion.div>
+
+          {/* Roles */}
+          <div className="grid grid-cols-3 gap-6">
+            <motion.div 
+              whileHover={{ scale: 1.1 }}
+              className="flex flex-col items-center p-6 bg-gray-800 rounded-lg"
+            >
+              <Search size={40} className="text-emerald-400" />
+              <div className="mt-4 text-emerald-400">IT Investigator</div>
+            </motion.div>
+            <motion.div 
+              whileHover={{ scale: 1.1 }}
+              className="flex flex-col items-center p-6 bg-gray-800 rounded-lg"
+            >
+              <Building2 size={40} className="text-blue-400" />
+              <div className="mt-4 text-blue-400">E-Architect</div>
+            </motion.div>
+            <motion.div 
+              whileHover={{ scale: 1.1 }}
+              className="flex flex-col items-center p-6 bg-gray-800 rounded-lg"
+            >
+              <Fingerprint size={40} className="text-purple-400" />
+              <div className="mt-4 text-purple-400">Forensic Examiner</div>
+            </motion.div>
+          </div>
+        </div>
+      )
+    },
+    languages: {
+      icon: <Globe size={32} />,
+      content: (
         <div className="grid grid-cols-3 gap-6">
           <motion.div 
-            whileHover={{ scale: 1.1 }}
-            className="flex flex-col items-center p-6 bg-gray-800 rounded-lg"
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-gray-800 rounded-lg flex flex-col items-center"
           >
-            <Workflow size={40} className="text-green-400" />
-            <div className="mt-4 text-green-400">n8n facilitator</div>
+            <div className="text-2xl mb-2">🇫🇷</div>
+            <h3 className="font-bold">French</h3>
+            <p className="text-sm text-gray-300">Native</p>
           </motion.div>
           <motion.div 
-            whileHover={{ scale: 1.1 }}
-            className="flex flex-col items-center p-6 bg-gray-800 rounded-lg"
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-gray-800 rounded-lg flex flex-col items-center"
           >
-            <Server size={40} className="text-blue-400" />
-            <div className="mt-4 text-blue-400">Magento Dev</div>
+            <div className="text-2xl mb-2">🇳🇱</div>
+            <h3 className="font-bold">Dutch</h3>
+            <p className="text-sm text-gray-300">Fluent</p>
           </motion.div>
           <motion.div 
-            whileHover={{ scale: 1.1 }}
-            className="flex flex-col items-center p-6 bg-gray-800 rounded-lg"
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-gray-800 rounded-lg flex flex-col items-center"
           >
-            <Code size={40} className="text-purple-400" />
-            <div className="mt-4 text-purple-400">PHP Developer</div>
+            <div className="text-2xl mb-2">🇬🇧</div>
+            <h3 className="font-bold">English</h3>
+            <p className="text-sm text-gray-300">Fluent</p>
           </motion.div>
         </div>
       )
@@ -80,66 +126,22 @@ const SymbolPortfolio = () => {
         </div>
       )
     },
-    apps: {
-      icon: <Blocks size={32} />,
-      content: (
-        <div className="grid grid-cols-2 gap-6">
-          <motion.div 
-            whileHover={{ scale: 1.05 }}
-            className="p-6 bg-gray-800 rounded-lg flex flex-col items-center"
-          >
-            <CloudLightning size={48} className="text-blue-400 mb-4" />
-            <h3 className="font-bold mb-2">App 1</h3>
-            <div className="flex space-x-4 mt-4">
-              <motion.div whileHover={{ scale: 1.1 }}>
-                <Terminal className="w-6 h-6 cursor-pointer" />
-              </motion.div>
-            </div>
-          </motion.div>
-          <motion.div 
-            whileHover={{ scale: 1.05 }}
-            className="p-6 bg-gray-800 rounded-lg flex flex-col items-center"
-          >
-            <CloudLightning size={48} className="text-purple-400 mb-4" />
-            <h3 className="font-bold mb-2">App 2</h3>
-            <div className="flex space-x-4 mt-4">
-              <motion.div whileHover={{ scale: 1.1 }}>
-                <Terminal className="w-6 h-6 cursor-pointer" />
-              </motion.div>
-            </div>
-          </motion.div>
-          <motion.div 
-            whileHover={{ scale: 1.05 }}
-            className="p-6 bg-gray-800 rounded-lg flex flex-col items-center"
-          >
-            <CloudLightning size={48} className="text-green-400 mb-4" />
-            <h3 className="font-bold mb-2">App 3</h3>
-            <div className="flex space-x-4 mt-4">
-              <motion.div whileHover={{ scale: 1.1 }}>
-                <Terminal className="w-6 h-6 cursor-pointer" />
-              </motion.div>
-            </div>
-          </motion.div>
-          <motion.div 
-            whileHover={{ scale: 1.05 }}
-            className="p-6 bg-gray-800 rounded-lg flex flex-col items-center"
-          >
-            <CloudLightning size={48} className="text-yellow-400 mb-4" />
-            <h3 className="font-bold mb-2">App 4</h3>
-            <div className="flex space-x-4 mt-4">
-              <motion.div whileHover={{ scale: 1.1 }}>
-                <Terminal className="w-6 h-6 cursor-pointer" />
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      )
-    },
     contact: {
-      icon: <Star size={32} />,
+      icon: <Mail size={32} />,
       content: (
         <div className="flex justify-center space-x-8">
           <motion.a
+            href="mailto:sahmad01@outlook.fr"
+            target="_blank"
+            whileHover={{ scale: 1.2, rotate: 360 }}
+            transition={{ duration: 0.5 }}
+            className="cursor-pointer"
+          >
+            <Mail size={40} className="text-red-400" />
+          </motion.a>
+          <motion.a
+            href="https://github.com/Sa3oud"
+            target="_blank"
             whileHover={{ scale: 1.2, rotate: 360 }}
             transition={{ duration: 0.5 }}
             className="cursor-pointer"
@@ -147,18 +149,13 @@ const SymbolPortfolio = () => {
             <Github size={40} className="text-white" />
           </motion.a>
           <motion.a
+            href="https://www.linkedin.com/in/saad-sahmad"
+            target="_blank"
             whileHover={{ scale: 1.2, rotate: 360 }}
             transition={{ duration: 0.5 }}
             className="cursor-pointer"
           >
             <Linkedin size={40} className="text-blue-400" />
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: 1.2, rotate: 360 }}
-            transition={{ duration: 0.5 }}
-            className="cursor-pointer"
-          >
-            <Mail size={40} className="text-red-400" />
           </motion.a>
         </div>
       )
@@ -166,7 +163,7 @@ const SymbolPortfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white p-8">
       <div className="flex justify-center space-x-12 mb-12">
         {Object.entries(sections).map(([key, section]) => (
           <motion.div
@@ -175,7 +172,7 @@ const SymbolPortfolio = () => {
             whileTap={{ scale: 0.95 }}
             onClick={() => setActiveSection(activeSection === key ? null : key)}
             className={`cursor-pointer p-4 rounded-full ${
-              activeSection === key ? 'bg-blue-500' : 'bg-gray-800'
+              activeSection === key ? 'bg-blue-500/20 backdrop-blur-sm' : 'bg-gray-800'
             }`}
           >
             {section.icon}
@@ -197,5 +194,3 @@ const SymbolPortfolio = () => {
     </div>
   );
 };
-
-export default SymbolPortfolio;
